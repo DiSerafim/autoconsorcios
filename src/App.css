@@ -8,7 +8,9 @@
   font-weight: 600;
 }
 
-.home, .administrtivo, .callcenter {
+.home, .administrativo, .callcenter, .diretoria,
+.dp, .ferramentas, .financeiro, .marketing,
+.parceiros, .recepcao, .servicosGerais, .ti {
   display: flex;
   height: 90vh;
   align-items: center;
