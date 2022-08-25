@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { SidebarData } from './SidebarData';
 import './Navbar.css';
 import { IconContext } from 'react-icons';
+import Logo from '../../img/Logo-auto-300x45.webp';
 
 function Navbar() {
     const [sidebar, setSidebar] = useState(false);
@@ -17,6 +18,7 @@ function Navbar() {
                 <Link to='#' className='menu-bars'>
                     <FaIcons.FaBars onClick={showSidebar} />
                 </Link>
+                <img src={Logo} alt='Logo Autoconsorcios' />
             </div>
             <nav className={sidebar ? 'menu open' : 'menu close'}>
                 <ul className='menu-items' onClick={showSidebar}>

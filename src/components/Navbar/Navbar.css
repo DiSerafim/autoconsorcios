@@ -6,6 +6,14 @@
     align-items: center;
 }
 
+.navbar > img {
+    align-items: flex-end;
+    justify-content: end;
+    margin-left: 45%;
+    margin-right: 2rem;
+    max-width: 150px;
+}
+
 .menu-bars {
     background: none;
     font-size: 2rem;
@@ -77,26 +85,11 @@
 }
 
 .menu-bar > svg:nth-child(1) > path:nth-child(1) {
-    left: 20rem;
+    left: -2rem;
     color: red;
     height: 40vmin;
     pointer-events: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-    .menu-bar > svg:nth-child(1) > path:nth-child(1) {
-        animation: App-logo-spin infinite 20s linear;
-    }
-}
-
-@keyframes App-logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(36deg);
-    }
-  }
 
 span {
     margin-left: 20px;
