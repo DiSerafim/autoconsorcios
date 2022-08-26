@@ -61,6 +61,10 @@ html {
 }
 
 .container .galery .products-container .card p {
+    max-width: 30ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     font-size: 1.4rem;
     color: #444;
     margin-bottom: 10px;
