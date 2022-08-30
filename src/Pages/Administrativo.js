@@ -1,13 +1,37 @@
 import React, { useState } from 'react';
 import './Administrativo.css';
-// import FotoNoticia from '../../src/img/indice4.jpeg';
-// import FotoNoticia1 from '../../src/img/indice1.jpeg';
-// import FotoNoticia2 from '../../src/img/indice2.jpeg';
-// import FotoNoticia3 from '../../src/img/indice3.jpeg';
-import Modal from '../components/Modal/Modal';
+import Modal from '../components/Modal/Modal.js';
+import { modalData } from '../components/Modal/ModalData';
+
 
 function Administrativo() {
-    const [openModal, setOpenModal] = useState(false);
+    const [openImg, setOpenImg] = useState(false);
+    const [openTitle, setOpenTitle] = useState(false);
+    const [openText, setOpenText] = useState(false);
+    const [currentIndex, setCurrentIndex] = useState(false);
+
+    const handleClick = (item, index) => {
+        setOpenImg(item.img);
+        setOpenTitle(item.title);
+        setOpenText(item.text);
+    };
+
+    const rotationRight = () => {
+        const totalLength = modalData.length;
+        if (currentIndex + 1 >= totalLength) {
+            setCurrentIndex(0);
+            const newUrl = modalData[0].img;
+            setOpenImg(newUrl);
+            return;
+        }
+        const newIndex = currentIndex + 1;
+        const newUrl = modalData.filter((item) => {
+            return modalData.indexOf(item) === newIndex;
+        });
+        const newItem = newUrl[0].img;
+        setOpenImg(newItem);
+        setCurrentIndex(newIndex);
+    }
 
     return (
         <div className='container'>
@@ -17,62 +41,26 @@ function Administrativo() {
 
             <section className='galery'>
                 <div className='products-container'>
-                    <div className='card' data-name='c-1' onClick={ () => setOpenModal(true) }>
-                        {openModal ? <Modal><h2>Aqui será a modal (children)</h2></Modal> : null}
-                        <h3 classNam
-                        e='card-title'>Título</h3>
-                        <p className='cart-text'>Mensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notícia</p>
-                        <span>Continuar  leitura &gt;&gt;</span>
-                    </div>
-
-                    {/* <div className='card' data-name='c-2'>
-                        <img src={FotoNoticia1} alt='noticia da empresa' />                            
-                        <h3 className='card-title'>Título</h3>
-                        <p className='cart-text'>Mensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notícia</p>
-                        <span>Continuar  leitura &gt;&gt;</span>
-                    </div>
-
-                    <div className='card' data-name='c-3'>
-                        <img src={FotoNoticia2} alt='noticia da empresa' />                            
-                        <h3 className='card-title'>Título</h3>
-                        <p className='cart-text'>Mensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notícia</p>
-                        <span>Continuar  leitura &gt;&gt;</span>
-                    </div>
-
-                    <div className='card' data-name='c-4'>
-                        <img src={FotoNoticia3} alt='noticia da empresa' />                            
-                        <h3 className='card-title'>Título</h3>
-                        <p className='cart-text'>Mensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notícia</p>
-                        <span>Continuar  leitura &gt;&gt;</span>
-                    </div>
-
-                    <div className='card' data-name='c-5'>
-                        <img src={FotoNoticia} alt='noticia da empresa' />                            
-                        <h3 className='card-title'>Título</h3>
-                        <p className='cart-text'>Mensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notícia</p>
-                        <span>Continuar  leitura &gt;&gt;</span>
-                    </div>
-
-                    <div className='card' data-name='c-6'>
-                        <img src={FotoNoticia1} alt='noticia da empresa' />                            
-                        <h3 className='card-title'>Título</h3>
-                        <p className='cart-text'>Mensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notícia</p>
-                        <span>Continuar  leitura &gt;&gt;</span>
-                    </div>
-
-                    <div className='card' data-name='c-7'>
-                        <img src={FotoNoticia2} alt='noticia da empresa' />                            
-                        <h3 className='card-title'>Título</h3>
-                        <p className='cart-text'>Mensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notícia</p>
-                        <span>Continuar  leitura &gt;&gt;</span>
-                    </div>
-
-                    <div className='card' data-name='c-8'>
-                        <img src={FotoNoticia3} alt='noticia da empresa' />                            
-                        <h3 className='card-title'>Título</h3>
-                        <p className='cart-text'>Mensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notícia</p>
-                        <span>Continuar  leitura &gt;&gt;</span>
-                    </div> */}
+                    {modalData.map((item, index) => (
+                            <div data-target={index} key={index} className={item.cName}>
+                                <img src={item.img} alt={item.title} onClick={ () => handleClick(item, index) } />
+                                <h3 className='card-title'>{item.title}</h3>
+                                <p className='cart-text'>{item.text}</p>
+                                <span onClick={ () => handleClick(item, index) }>Ver notícia &gt;&gt;</span>
+                            </div>
+                        )
+                    )}
+                    {openImg
+                        ? (<Modal
+                            openImg={openImg}
+                            openTitle={openTitle}
+                            openText={openText}
+                            onClose={() => setOpenImg(false)}
+                            setOpenImg={setOpenImg}
+                            rotationRight={rotationRight}
+                        ></Modal>)
+                        : null
+                    }
                 </div>
             </section>
         </div>

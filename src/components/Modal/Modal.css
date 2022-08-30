@@ -1,39 +1,64 @@
-.modal {
+#modal {
     align-items: center;
     background-color: rgba(0, 0, 0, 0.8);
-    border: solid 1px red;
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     justify-content: center;
     left: 0;
     position: absolute;
     top: 0;
+    text-align: center;
     z-index: 1;
     width: 100%;
 }
 
-.container {
-    background-color: #ccc;
-    border: solid 1px green;
+#modal > div {
+    background-color: #fff;
     border-radius: 2rem;
-    width: 60%;
-    height: 60%;
+    max-width: 60%;
+    max-height: 100vh;
+    height: auto;
     align-items: center;
     justify-content: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 2rem;
+}
+
+#modal > div > img {
+    margin-top: 0;
+    max-width: 60%;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+#modal > div > h3 {
+    margin: 1rem 0;
+    font-size: 2rem;
+    color: rgb(133, 122, 122);
+}
+
+#modal > div > p {
+    color: #444;
+    font-family: Roboto;
+    font-size: 1.4rem;
+    margin: 2rem;
 }
 
 .fechar {
     align-items: center;
-    background-color: transparent;
-    color: red;
-    outline: none;
-    right: calc(-100% + 48px);
+    background-color: #ccc;
+    border: none;
+    border-radius: 50%;
     cursor: pointer;
-    top: 16px;
     display: flex;
-    position: relative;
-    width: 22px;
     height: 22px;
+    outline: none;
+    position: relative;
+    right: calc(-100% + 20px);
+    top: 1px;
+    z-index: 200;
+    width: 22px;
 }
 
 .fechar::after, .fechar::before {
@@ -41,8 +66,8 @@
     position: absolute;
     width: 2.5px;
     height: 24px;
-    background-color: #000 ;
-    right: calc(-100% +);
+    background-color: red;
+    box-shadow: 1px 1px rgb(216, 5, 5);
 }
 
 .fechar::after {
@@ -51,4 +76,16 @@
 
 .fechar::before {
     transform: rotate(45deg);
+}
+
+@media screen and (max-width: 600px) {
+    #modal > div {
+        max-height: 80vh;
+        max-width: 80%;
+        padding: 1rem;
+    }
+
+    #modal > div > img {
+        max-width: 80%;
+    }
 }
