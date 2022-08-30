@@ -2,7 +2,6 @@ let classPreview = document.querySelector('.preview');
 let classPreviewCard = document.querySelectorAll('.preview-card');
 
 // abre o card ao clicar, adicionando active a sua classe
-
 document.querySelectorAll('.products-container .card').forEach(open => {
     open.onclick = () => {
         classPreview.style.display = 'flex';

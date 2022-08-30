@@ -48,16 +48,11 @@ html {
     transform: scale(0.9);
 }
 
-.container .galery .products-container .card h3 {
+.container .galery .products-container .card .card-title {
     padding: 0.5rem 0;
     font-size: 1.5rem;
     color: #666;
     text-align: center;
-}
-
-.container .galery .products-container .card:hover h3 {
-    color: #274;
-    text-decoration: underline;
 }
 
 .container .galery .products-container .card p {
