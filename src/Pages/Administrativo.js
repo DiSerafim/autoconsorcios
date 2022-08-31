@@ -18,18 +18,24 @@ function Administrativo() {
 
     const rotationRight = () => {
         const totalLength = modalData.length;
-        if (currentIndex + 1 >= totalLength) {
+        if (currentIndex +1 >= totalLength) {
             setCurrentIndex(0);
-            const newUrl = modalData[0].img;
-            setOpenImg(newUrl);
+            const newImg = modalData[0].img;
+            // const newTitle = modalData[0].title;
+            setOpenImg(newImg);
+            // setOpenTitle(newTitle);
             return;
         }
         const newIndex = currentIndex + 1;
-        const newUrl = modalData.filter((item) => {
+        const newImg = modalData.filter((item) => {
             return modalData.indexOf(item) === newIndex;
         });
-        const newItem = newUrl[0].img;
-        setOpenImg(newItem);
+        const newItemImg = newImg[0].img;
+        const newItemTitle = newImg[0].title;
+        const newItemText = newImg[0].text;
+        setOpenImg(newItemImg);
+        setOpenText(newItemText);
+        setOpenTitle(newItemTitle);
         setCurrentIndex(newIndex);
     }
 

@@ -12,11 +12,12 @@ html {
 .container #header .title {
     font-size: 1rem;
     color: #999;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
+    margin-top: 6rem;
     text-transform: uppercase;
     text-align: left;
     text-decoration: underline;
-}
+}   
 
 .container .galery .products-container {
     display: grid;

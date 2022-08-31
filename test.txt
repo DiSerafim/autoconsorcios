@@ -1,0 +1,1 @@
+Arquivo aberto com o comando 'open test.txt'

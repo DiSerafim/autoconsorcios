@@ -1,0 +1,41 @@
+.galery-tools {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 5px;
+}
+
+.card {
+    background-color: rgb(235, 232, 232);
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 5px;
+    padding: 5px;
+    width: 23%;
+}
+
+.card svg {
+    height: 5rem;
+    width: 5rem;
+}
+
+.card .text {
+    padding: 1rem;
+    width: 70%;
+}
+
+.card .text h3{
+    margin-top: 0;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.card .text span {
+    font-size: 1rem;
+    margin-left: 80%;
+    background-color: white;
+    border-radius: 50%;
+    padding: 3px;
+    margin-top: 2rem;
+}
