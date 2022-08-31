@@ -1,5 +1,6 @@
 import React from 'react';
 import './Modal.css';
+import { BsFillArrowRightCircleFill } from 'react-icons/bs';
 
 const Modal = ({ id = 'modal',onClose = () => {}, openImg, openText, openTitle, rotationRight, setOpenImg }) => {
     const handleOutsideClick = (e) => {
@@ -21,6 +22,7 @@ const Modal = ({ id = 'modal',onClose = () => {}, openImg, openText, openTitle, 
                 <h3 className='card-title'>{openTitle}</h3>
                 <p className='cart-text'>{openText}</p>
             </div>
+            <BsFillArrowRightCircleFill onClick={rotationRight} className='next' />
         </div>
     );
 }

@@ -4,6 +4,9 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
 }
 
 .navbar > img {
@@ -30,6 +33,7 @@
     position: fixed;
     top: 0;
     transition: 0.5s;
+    z-index: 1000;
 }
 
 .menu.open {
@@ -84,11 +88,10 @@
     animation: infinite 20s linear;
 }
 
-.menu-bar > svg:nth-child(1) > path:nth-child(1) {
-    left: -2rem;
-    color: red;
-    height: 40vmin;
-    pointer-events: none;
+#root > nav > ul > li.navbar-toggle > a > svg {
+    background: none;
+    font-size: 3rem;
+    margin-left: 20rem;
 }
 
 span {
