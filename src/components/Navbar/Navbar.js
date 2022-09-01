@@ -6,6 +6,7 @@ import { SidebarData } from './SidebarData';
 import './Navbar.css';
 import { IconContext } from 'react-icons';
 import Logo from '../../img/Logo-auto-300x45.webp';
+import * as RiIcons from 'react-icons/ri';
 
 function Navbar() {
     const [sidebar, setSidebar] = useState(false);
@@ -35,8 +36,15 @@ function Navbar() {
                                     <span>{item.title}</span>
                                 </Link>
                             </li>
+
                         )
                     })}
+                    <li className='nav-text'>
+                        <a href='http://192.168.100.250/glpi/front/central.php' target='_blanck' >
+                            <RiIcons.RiCustomerService2Fill />
+                            <span>Chamados</span>
+                        </a>
+                    </li>
                 </ul>
             </nav>
             </IconContext.Provider>
