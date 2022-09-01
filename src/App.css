@@ -8,9 +8,7 @@
   font-weight: 600;
 }
 
-.home, .administrativo, .callcenter, .diretoria,
-.dp, .ferramentas, .financeiro, .marketing,
-.parceiros, .recepcao, .servicosGerais, .ti {
+.home, .colaborador, .empresa {
   display: flex;
   height: 100vh;
   align-items: center;

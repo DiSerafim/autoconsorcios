@@ -1,14 +1,44 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Home.css';
-import FotoNoticia from '../../src/img/indice4.jpeg';
-import FotoNoticia1 from '../../src/img/indice1.jpeg';
-import FotoNoticia2 from '../../src/img/indice2.jpeg';
-import FotoNoticia3 from '../../src/img/indice3.jpeg';
-import * as FaIcons from "react-icons/fa";
-import './script';
+import Modal from '../components/Modal/Modal.js';
+import { modalData } from '../components/Modal/ModalData';
 
 
 function Home() {
+    const [openImg, setOpenImg] = useState(false);
+    const [openTitle, setOpenTitle] = useState(false);
+    const [openText, setOpenText] = useState(false);
+    const [currentIndex, setCurrentIndex] = useState(false);
+
+    const handleClick = (item, index) => {
+        setOpenImg(item.img);
+        setOpenTitle(item.title);
+        setOpenText(item.text);
+    };
+
+    const rotationRight = () => {
+        const totalLength = modalData.length;
+        if (currentIndex +1 >= totalLength) {
+            setCurrentIndex(0);
+            const newImg = modalData[0].img;
+            // const newTitle = modalData[0].title;
+            setOpenImg(newImg);
+            // setOpenTitle(newTitle);
+            return;
+        }
+        const newIndex = currentIndex + 1;
+        const newImg = modalData.filter((item) => {
+            return modalData.indexOf(item) === newIndex;
+        });
+        const newItemImg = newImg[0].img;
+        const newItemTitle = newImg[0].title;
+        const newItemText = newImg[0].text;
+        setOpenImg(newItemImg);
+        setOpenText(newItemText);
+        setOpenTitle(newItemTitle);
+        setCurrentIndex(newIndex);
+    }
+
     return (
         <div className='container'>
             <section id='header' className='text-center'>
@@ -17,119 +47,26 @@ function Home() {
 
             <section className='galery'>
                 <div className='products-container'>
-                    <div className='card' data-name='c-1'>
-                        <img src={FotoNoticia} alt='noticia da empresa' />                            
-                        <h3 className='card-title'>Título</h3>
-                        <p className='cart-text'>Mensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notícia</p>
-                        <span>Continuar  leitura &gt;&gt;</span>
-                    </div>
-
-                    <div className='card' data-name='c-2'>
-                        <img src={FotoNoticia1} alt='noticia da empresa' />                            
-                        <h3 className='card-title'>Título</h3>
-                        <p className='cart-text'>Mensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notícia</p>
-                        <span>Continuar  leitura &gt;&gt;</span>
-                    </div>
-
-                    <div className='card' data-name='c-3'>
-                        <img src={FotoNoticia2} alt='noticia da empresa' />                            
-                        <h3 className='card-title'>Título</h3>
-                        <p className='cart-text'>Mensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notícia</p>
-                        <span>Continuar  leitura &gt;&gt;</span>
-                    </div>
-
-                    <div className='card' data-name='c-4'>
-                        <img src={FotoNoticia3} alt='noticia da empresa' />                            
-                        <h3 className='card-title'>Título</h3>
-                        <p className='cart-text'>Mensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notícia</p>
-                        <span>Continuar  leitura &gt;&gt;</span>
-                    </div>
-
-                    <div className='card' data-name='c-5'>
-                        <img src={FotoNoticia} alt='noticia da empresa' />                            
-                        <h3 className='card-title'>Título</h3>
-                        <p className='cart-text'>Mensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notícia</p>
-                        <span>Continuar  leitura &gt;&gt;</span>
-                    </div>
-
-                    <div className='card' data-name='c-6'>
-                        <img src={FotoNoticia1} alt='noticia da empresa' />                            
-                        <h3 className='card-title'>Título</h3>
-                        <p className='cart-text'>Mensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notícia</p>
-                        <span>Continuar  leitura &gt;&gt;</span>
-                    </div>
-
-                    <div className='card' data-name='c-7'>
-                        <img src={FotoNoticia2} alt='noticia da empresa' />                            
-                        <h3 className='card-title'>Título</h3>
-                        <p className='cart-text'>Mensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notícia</p>
-                        <span>Continuar  leitura &gt;&gt;</span>
-                    </div>
-
-                    <div className='card' data-name='c-8'>
-                        <img src={FotoNoticia3} alt='noticia da empresa' />                            
-                        <h3 className='card-title'>Título</h3>
-                        <p className='cart-text'>Mensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notícia</p>
-                        <span>Continuar  leitura &gt;&gt;</span>
-                    </div>
-                </div>
-            </section>
-
-            <section className='preview'>
-                <div className='preview-card' data-target='c-1'>
-                    <FaIcons.FaWindowClose className='fechar' />
-                    <img src={FotoNoticia1} alt='noticia da empresa' />                            
-                    <h3 className='card-title'>Título</h3>
-                    <p className='cart-text'>Mensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notícia</p>
-                </div>
-
-                <div className='preview-card' data-target='c-2'>
-                    <FaIcons.FaWindowClose className='fechar' />
-                    <img src={FotoNoticia2} alt='noticia da empresa' />                            
-                    <h3 className='card-title'>Título</h3>
-                    <p className='cart-text'>Mensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notícia</p>
-                </div>
-
-                <div className='preview-card' data-target='c-3'>
-                    <FaIcons.FaWindowClose className='fechar' />
-                    <img src={FotoNoticia3} alt='noticia da empresa' />                            
-                    <h3 className='card-title'>Título</h3>
-                    <p className='cart-text'>Mensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notícia</p>
-                </div>
-
-                <div className='preview-card' data-target='c-4'>
-                    <FaIcons.FaWindowClose className='fechar' />
-                    <img src={FotoNoticia} alt='noticia da empresa' />                            
-                    <h3 className='card-title'>Título</h3>
-                    <p className='cart-text'>Mensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notícia</p>
-                </div>
-
-                <div className='preview-card' data-target='c-5'>
-                    <FaIcons.FaWindowClose className='fechar' />
-                    <img src={FotoNoticia1} alt='noticia da empresa' />                            
-                    <h3 className='card-title'>Título</h3>
-                    <p className='cart-text'>Mensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notícia</p>
-                </div>
-
-                <div className='preview-card' data-target='c-6'>
-                    <FaIcons.FaWindowClose className='fechar' />
-                    <img src={FotoNoticia2} alt='noticia da empresa' />                            
-                    <h3 className='card-title'>Título</h3>
-                    <p className='cart-text'>Mensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notícia</p>
-                </div>
-
-                <div className='preview-card' data-target='c-7'>
-                    <FaIcons.FaWindowClose className='fechar' />
-                    <img src={FotoNoticia3} alt='noticia da empresa' />                            
-                    <h3 className='card-title'>Título</h3>
-                    <p className='cart-text'>Mensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notícia</p>
-                </div>
-
-                <div className='preview-card' data-target='c-8'>
-                    <FaIcons.FaWindowClose className='fechar' />
-                    <img src={FotoNoticia} alt='noticia da empresa' />                            
-                    <h3 className='card-title'>Título</h3>
-                    <p className='cart-text'>Mensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notíciaMensam da notícia</p>
+                    {modalData.map((item, index) => (
+                            <div data-target={index} key={index} className={item.cName}>
+                                <img src={item.img} alt={item.title} onClick={ () => handleClick(item, index) } />
+                                <h3 className='card-title'>{item.title}</h3>
+                                <p className='cart-text'>{item.text}</p>
+                                <span onClick={ () => handleClick(item, index) }>Ver notícia &gt;&gt;</span>
+                            </div>
+                        )
+                    )}
+                    {openImg
+                        ? (<Modal
+                            openImg={openImg}
+                            openTitle={openTitle}
+                            openText={openText}
+                            onClose={() => setOpenImg(false)}
+                            setOpenImg={setOpenImg}
+                            rotationRight={rotationRight}
+                        ></Modal>)
+                        : null
+                    }
                 </div>
             </section>
         </div>

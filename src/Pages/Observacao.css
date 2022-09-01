@@ -1,0 +1,141 @@
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+.container #header .title {
+    font-size: 1rem;
+    color: #999;
+    margin-bottom: 1rem;
+    margin-top: 6rem;
+    text-transform: uppercase;
+    text-align: left;
+    text-decoration: underline;
+}   
+
+.container .galery .products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 4rem 0.1rem;
+}
+
+.container .galery .products-container .card {
+    text-align: left;
+    padding: 2rem;
+    background-color: #fff;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    outline: 0.1rem solid #ccc;
+    outline-offset: -1.5rem;
+    cursor: pointer;
+}
+
+.container .galery .products-container .card:hover {
+    outline: 0.2rem solid #ccc;
+    outline-offset: 0;
+}
+
+.container .galery .products-container .card img {
+    height: 25rem;
+    width: 100%;
+}
+
+.container .galery .products-container .card:hover img {
+    transform: scale(0.9);
+}
+
+.container .galery .products-container .card .card-title {
+    padding: 0.5rem 0;
+    font-size: 1.5rem;
+    color: #666;
+    text-align: center;
+}
+
+.container .galery .products-container .card p {
+    max-width: 30ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 1.4rem;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.container .galery .products-container .card span {
+    justify-content: end;
+    align-self: flex-end;
+    padding: 7rem;
+    margin-left: 35px;
+    font-size: 1rem;
+    color: black;
+    text-transform: uppercase;
+    text-align: right;
+    right: 0;
+}
+
+/* carrousel */
+
+.preview {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    left: 0;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.preview .preview-card {
+    background-color: #fff;
+    display: none;
+    margin: 1rem;
+    padding: 2rem;
+    position: relative;
+    text-align: center;
+    width: 40rem;
+}
+
+.preview .preview-card.active {
+    display: inline-block;
+}
+
+.preview .preview-card img {
+    height: 24rem;
+}
+
+.preview .preview-card svg {
+    color: red;
+    cursor: pointer;
+    font-size: 2rem;
+    position: absolute;
+    right: 0.2rem;
+    top: 0;
+}
+
+.preview .preview-card svg:hover {
+    transform: rotate(90deg);
+}
+
+.preview .preview-card h3 {
+    padding: 0.5rem 0;
+    font-size: 2rem;
+    color: #666;
+    text-align: left;
+    
+}
+
+.preview .preview-card p {
+    color: #333;
+    font-family: Roboto;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    padding: 1rem 0;
+    text-align: left;
+}
