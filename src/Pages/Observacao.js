@@ -6,15 +6,17 @@ import FotoNoticia2 from '../../src/img/indice2.jpeg';
 import FotoNoticia3 from '../../src/img/indice3.jpeg';
 import * as FaIcons from "react-icons/fa";
 import './script';
+import Header from '../components/Header/Header';
 
 function Home() {
     return (
         <div className='container'>
             <section id='header' className='text-center'>
-                <h3 className='title'>Início &gt; Notícias</h3>
+                <h3 className='title' title='Em observação'>&gt; Em observação</h3>
             </section>
 
             <section className='galery'>
+                <Header />
                 <div className='products-container'>
                     <div className='card' data-name='c-1'>
                         <img src={FotoNoticia} alt='noticia da empresa' />                            

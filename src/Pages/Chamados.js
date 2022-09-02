@@ -6,7 +6,7 @@ function Chamados() {
     return (
         <main className='container'>
             <section id='header' className='text-center'>
-                <h3 className='title'>Início &gt; Chamados</h3>
+                <h3 className='title'>&gt; Chamados</h3>
             </section>
 
             <section className='galery-tools'>
