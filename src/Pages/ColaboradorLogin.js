@@ -1,13 +1,17 @@
-import React, { useState } from 'react';
-import './Colaborador.css';
+import React, { useState, useContext } from 'react';
+import './ColaboradorLogin.css';
+import { AuthContext } from '../context/auth';
 
 function Colaborador() {
+    const { authenticated, login } = useContext(AuthContext);
+
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log("entrou na página", { email, password });
+        login(email, password);
     }
 
     return (
@@ -18,8 +22,9 @@ function Colaborador() {
             
             <section className='colaborador'>
                 <div className='login'>
-                    <h1>Colaborador - Login</h1>
-                    <h6>... Em construção!</h6>
+                    <h1>Faça Login para cotinuar</h1>
+                    <h6>--' Para ter acesso use seu e-mail e a senha 'serafim'</h6>
+                    <h6>Usuário autorizado? {String(authenticated)}</h6>
                     <form className='form' onSubmit={handleSubmit} action=''>
                         <div className='field'>
                             <label htmlFor='email'>E-mail</label>
@@ -29,6 +34,8 @@ function Colaborador() {
                                 id='email'
                                 value={ email }
                                 onChange={ (e) => setEmail(e.target.value) }
+                                title='Digite seu e-mail!'
+                                required
                             />
                         </div>
                         <div className='field'>
@@ -39,6 +46,9 @@ function Colaborador() {
                                 id='password'
                                 value={ password }
                                 onChange={ (e) => setPassword(e.target.value) }
+                                required
+                                title='Digite sua senha!'
+                                minLength={6}
                             />
                         </div>
                         <div className='button'>

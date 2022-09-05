@@ -8,7 +8,7 @@
   font-weight: 600;
 }
 
-.home, .colaborador, .empresa {
+.home, .colaborador, .empresa, .colaboradores {
   display: flex;
   height: 100vh;
   align-items: center;
