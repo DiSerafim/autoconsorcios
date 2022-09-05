@@ -42,7 +42,7 @@ function Home() {
     return (
         <div className='container'>
             <section id='header' className='text-center'>
-                <h3 className='title'>Início &gt; Notícias</h3>
+                <h3 className='title' title='Página de notícias'>Início &gt; Notícias</h3>
             </section>
 
             <section className='galery'>

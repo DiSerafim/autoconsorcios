@@ -17,20 +17,20 @@ function Navbar() {
         <IconContext.Provider value={{ color: '#fff' }}> {/*Cor dos icones svg*/}
             <div className='navbar'>
                 <Link to='#' className='menu-bars'>
-                    <FaIcons.FaBars onClick={showSidebar} />
+                    <FaIcons.FaBars onClick={showSidebar} title='Menu Abrir' />
                 </Link>
-                <img src={Logo} alt='Logo Autoconsorcios' />
+                <img src={Logo} alt='Logo Autoconsorcios' title='Logo Autoconsorcios' />
             </div>
             <nav className={sidebar ? 'menu open' : 'menu close'}>
                 <ul className='menu-items' onClick={showSidebar}>
-                    <li className='navbar-toggle'>
+                    <li className='navbar-toggle'  title='Menu Fechar'>
                         <Link to="#" className='menu-bar'>
                             <AiIcons.AiOutlineClose />
                         </Link>
                     </li>
                     {SidebarData.map((item, index) => {
                         return (
-                            <li key={index} className={item.cName}>
+                            <li key={index} className={item.cName} title={item.title}>
                                 <Link to={item.path}>
                                     {item.icon}
                                     <span>{item.title}</span>
@@ -39,7 +39,7 @@ function Navbar() {
 
                         )
                     })}
-                    <li className='nav-text'>
+                    <li className='nav-text' title='Abrir Chamados'>
                         <a href='http://192.168.100.250/glpi/front/central.php' target='_blanck' >
                             <RiIcons.RiCustomerService2Fill />
                             <span>Chamados</span>

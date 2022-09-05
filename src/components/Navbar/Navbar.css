@@ -52,7 +52,6 @@
 }
 
 .nav-text a {
-    /* background-color: tomato; */
     align-items: center;
     border-radius: 4px;
     color: #f5f5f5;
@@ -65,8 +64,7 @@
 }
 
 .nav-text a:hover {
-    /* background-color: #f5f5f5; */
-    color: tomato;
+    color: #E42C30;
 }
 
 #root > nav > ul > li:nth-child(7) {
@@ -97,6 +95,13 @@
     background: none;
     font-size: 3rem;
     margin-left: 20rem;
+}
+
+/* excluir este */
+#root > nav > ul > li > a:hover {
+    background: #1F4B94;
+    color: white;
+    padding: 2rem;
 }
 
 span {
