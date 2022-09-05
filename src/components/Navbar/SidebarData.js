@@ -12,7 +12,7 @@ export const SidebarData = [
     },
     {
         title: 'Colaborador',
-        path: '/colaborador',
+        path: '/colaboradores',
         icon: <FcIcons.FcManager />,
         cName: 'nav-text'
     },
