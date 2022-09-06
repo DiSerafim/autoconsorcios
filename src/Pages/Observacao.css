@@ -11,7 +11,7 @@ html {
 
 .container #header .title {
     font-size: 1rem;
-    color: #999;
+    color: #0038a1;
     margin-bottom: 1rem;
     margin-top: 6rem;
     text-transform: uppercase;
@@ -33,6 +33,7 @@ html {
     outline: 0.1rem solid #ccc;
     outline-offset: -1.5rem;
     cursor: pointer;
+    justify-self: center;
 }
 
 .container .galery .products-container .card:hover {
@@ -43,6 +44,7 @@ html {
 .container .galery .products-container .card img {
     height: 25rem;
     width: 100%;
+    max-width: 300px;
 }
 
 .container .galery .products-container .card:hover img {

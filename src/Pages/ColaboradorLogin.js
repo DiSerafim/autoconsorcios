@@ -23,7 +23,7 @@ function Colaborador() {
             <section className='colaborador'>
                 <div className='login'>
                     <h1>Faça Login para cotinuar</h1>
-                    <h6>--' Para ter acesso use seu e-mail e a senha 'serafim'</h6>
+                    <h6>--' Para ter acesso use seu e-mail e a senha <h4>'serafim'</h4></h6>
                     <h6>Usuário autorizado? {String(authenticated)}</h6>
                     <form className='form' onSubmit={handleSubmit} action=''>
                         <div className='field'>

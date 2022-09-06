@@ -1,8 +1,7 @@
 .navbar {
-    background-image: linear-gradient(-90deg, #ffd700, #b6862d);
+    background-color: #d8d8d8;
     height: 80px;
     display: flex;
-    justify-content: flex-start;
     align-items: center;
     position: fixed;
     width: 100%;
@@ -10,11 +9,12 @@
 }
 
 .navbar > img {
-    align-items: flex-end;
-    justify-content: end;
-    margin-left: 45%;
-    margin-right: 2rem;
-    max-width: 150px;
+    height: 99%;
+    display: flex;
+    justify-self: center;
+    width: auto;
+    margin-left: 5rem;
+    max-height: auto;
 }
 
 .menu-bars {
@@ -24,7 +24,7 @@
 }
 
 .menu {
-    background-color: #245;
+    background-color: #1F4B94;
     width: 250px;
     height: 100vh;
     display: flex;
@@ -64,7 +64,7 @@
 }
 
 .nav-text a:hover {
-    color: #E42C30;
+    color: #FFF;
 }
 
 #root > nav > ul > li:nth-child(7) {
@@ -78,7 +78,7 @@
 }
 
 .menu-items {
-    background-color: #245;
+    background-color: #1F4B94;
     width: 100%;
 }
 
@@ -97,13 +97,33 @@
     margin-left: 20rem;
 }
 
-/* excluir este */
 #root > nav > ul > li > a:hover {
-    background: #1F4B94;
+    background: #5b91e9;
     color: white;
     padding: 2rem;
 }
 
 span {
     margin-left: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .navbar {
+        background-color: #d8d8d8;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .navbar > img {
+        align-items: center;
+        display: flex;
+        width: 200%;
+        height: 60%;
+        z-index: -1000;
+        margin-left: -5rem;
+    }
 }

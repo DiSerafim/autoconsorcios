@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { SidebarData } from './SidebarData';
 import './Navbar.css';
 import { IconContext } from 'react-icons';
-import Logo from '../../img/Logo-auto-300x45.webp';
+import Logo from '../../img/banner-topo.jpeg';
 import * as RiIcons from 'react-icons/ri';
 
 function Navbar() {
@@ -14,7 +14,7 @@ function Navbar() {
 
     return (
         <>
-        <IconContext.Provider value={{ color: '#fff' }}> {/*Cor dos icones svg*/}
+        <IconContext.Provider value={{ color: '#E42C30' }}> {/*Cor dos icones svg*/}
             <div className='navbar'>
                 <Link to='#' className='menu-bars'>
                     <FaIcons.FaBars onClick={showSidebar} title='Menu Abrir' />

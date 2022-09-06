@@ -9,21 +9,31 @@ export const modalData = [
     {
         img: Foto,
         title: 'Aniversário Aldenira',
-        text: 'Seus esforços são muito apreciados e de todo o coração, pois contribuem para o que faz esta empresa brilhar. Obrigado por seu contínuo trabalho duro e dedicação. O Grupo Auto Consórcios lhe deseja um feliz aniversário, que seu dia seja incrível assim como você.',
+        text: 'Seus esforços são muito apreciados e de todo o coração, pois contribuem para o que faz esta empresa brilhar. ' +
+        'Obrigado por seu contínuo trabalho duro e dedicação. ' +
+        'O Grupo Auto Consórcios lhe deseja um feliz aniversário, que seu dia seja incrível assim como você.',
         cName: 'card',
         id: 1,
     },
     {
         img: Foto1,
         title: 'Sugestões?',
-        text: 'Engajar significa investir seu tempo em fazer algo com afinco e vontade. É fazer com que colaboradores de uma empresa possam [e desejem] estar interessados em seu sucesso e o sucesso da coletividade do grupo. Somos uma empresa que visa a valorização da equipe e a satisfação total dos nossos clientes. Levamos nossos colaboradores a reconhecerem-se como parte da equipe e responsáveis pela concretização dos sonhos dos clientes. Se a empresa não considera os colaboradores como sendo peça central de sua organização, dificilmente a empresa vai atingir resultados satisfatórios, e muito menos em relação ao engajamento de cada um.',
+        text: 'Engajar significa investir seu tempo em fazer algo com afinco e vontade. ' +
+        'É fazer com que colaboradores de uma empresa possam [e desejem] estar interessados em seu sucesso e o sucesso da coletividade do grupo.' +
+        'Somos uma empresa que visa a valorização da equipe e a satisfação total dos nossos clientes. ' +
+        'Levamos nossos colaboradores a reconhecerem-se como parte da equipe e responsáveis pela concretização dos sonhos dos clientes. ' +
+        'Se a empresa não considera os colaboradores como sendo peça central de sua organização, dificilmente a empresa vai atingir resultados satisfatórios, e muito menos em relação ao engajamento de cada um.',
         cName: 'card',
         id: 2,
     },
     {
         img: Foto2,
         title: 'Destaques do Mês',
-        text: 'Agosto foi um mês de grandes metas batidas por vocês, nossos colaboradores. Viemos agradecer a cada um pelo esforço e dedicação que colocam diariamente no trabalho. Obrigado, equipe! Vocês são a prova de que o sucesso se alcança através de talento, determinação e trabalho duro. O caminho pode ter sido difícil, mas todos souberam manter a confiança e nunca desistiram ou afastaram o olhar da meta. Contamos com vocês para que o mês de Setembro seja tão produtivo quanto Agosto. Nosso total agradecimento a: Augusto Rocha, Eunice Farias, Jorge Fernandes, Karla Lima, Marcelo Araújo, Rafael Barros, Roberta Corrêa, Suzana Santiago, Tatiana Brito, Tayron Silva e Wellington Junior.',
+        text: `Agosto foi um mês de grandes metas batidas por vocês, nossos colaboradores. <br>` +
+        `Viemos agradecer a cada um pelo esforço e dedicação que colocam diariamente no trabalho. <br>` +
+        'Obrigado, equipe! Vocês são a prova de que o sucesso se alcança através de talento, determinação e trabalho duro. ' + 
+        'O caminho pode ter sido difícil, mas todos souberam manter a confiança e nunca desistiram ou afastaram o olhar da meta. <br>' +
+        'Contamos com vocês para que o mês de Setembro seja tão produtivo quanto Agosto. Nosso total agradecimento a: Augusto Rocha, Eunice Farias, Jorge Fernandes, Karla Lima, Marcelo Araújo, Rafael Barros, Roberta Corrêa, Suzana Santiago, Tatiana Brito, Tayron Silva e Wellington Junior.',
         cName: 'card',
         id: 3,
     },
