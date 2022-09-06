@@ -22,10 +22,4 @@ export const SidebarData = [
         icon: <FcIcons.FcAbout />,
         cName: 'nav-text'
     },
-    {
-        title: 'Em Obsevação',
-        path: '/observacao',
-        icon: <MdIcons.MdConstruction />,
-        cName: 'nav-text'
-    },
 ];

@@ -69,3 +69,7 @@
 .colaborador .login .form .button button:hover {
     background-color: rgb(212, 211, 211);
 }
+
+#root > div.container > section.colaborador > div > h6:nth-child(2) > h4 {
+    color: #274;
+}
