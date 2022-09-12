@@ -13,7 +13,10 @@ export default function Dots() {
         }
         return dots;
     };
-    return <div className='dots'>
-        {renderDots()}
-    </div>
+    
+    return (
+        <div className='dots'>
+            {renderDots()}
+        </div>
+    );
 }

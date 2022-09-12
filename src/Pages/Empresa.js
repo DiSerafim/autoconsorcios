@@ -1,14 +1,14 @@
 import React, { useEffect, useState, createContext } from 'react';
 import PropTypes from 'prop-types';
-import getImages from '../img/imagesApi';
+import { getImages } from '../img/imagesApi';
 import Arrows from '../components/SliderEmpresa/Controls/Arrows.js';
 import Dots from '../components/SliderEmpresa/Controls/Dots.js';
-
 import Slide from '../components/SliderEmpresa/Slide';
 import './Empresa.css';
 
 export const SliderContext = createContext();
 
+// Componente de constrole deslizante
 const Empresa = function ({ width, height, autoPlay, autoPlayTime }) {
     const [items, setItems] = useState([]);
     const [slide, setSlide] = useState(0);
@@ -84,44 +84,6 @@ const Empresa = function ({ width, height, autoPlay, autoPlayTime }) {
         };
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [items.length, slide]);
-
-    // const handleTouchStart = (e) => {
-    //     const touchDown = e.touches[0].clientX;
-
-    //     setTouchPosition(touchDown);
-    // }
-
-    // const handleTouchMove = (e) => {
-    //     if (touchPosition === null) {
-    //         return;
-    //     }
-
-    //     const currentPosition = e.touches[0].clientX;
-    //     const direction = touchPosition - currentPosition;
-
-    //     if (direction > 10) {
-    //         changeSlide(1)
-    //     }
-
-    //     if (direction < -10) {
-    //         changeSlide(-1);
-    //     }
-
-    //     setTouchPosition(null);
-    // }
-
-    // useEffect (() => {
-    //     if (!autoPlay) return;
-
-    //     const interval = setInterval(() => {
-    //         changeSlide(1);
-    //     }, autoPlayTime);
-
-    //     return () => {
-    //         clearInterval(interval);
-    //     };
-    //     // eslint-disable-next-line
-    // }, [items.length, slide, autoPlay, autoPlayTime]);
 
     return (
         <div

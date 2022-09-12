@@ -1,5 +1,4 @@
 import React from 'react';
-
 import './SlideTitle.css';
 
 export default function SlideTitle({ title }) {

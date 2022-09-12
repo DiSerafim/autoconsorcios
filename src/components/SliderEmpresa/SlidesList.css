@@ -1,0 +1,6 @@
+.container .slider .slide-list {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
