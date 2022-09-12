@@ -1,3 +1,4 @@
 .slide {
-    background-color: yellow;
+    flex: 1 0 100%;
+    position: relative;
 }

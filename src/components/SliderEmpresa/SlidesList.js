@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import Slide from './Slide';
 import { SliderContext } from '../../Pages/Empresa';
-
 import './SlidesList.css';
 
 export default function SlidesList() {

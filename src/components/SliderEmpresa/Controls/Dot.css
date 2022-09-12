@@ -1,3 +1,12 @@
+.dot {
+    background-color: #e7e7e7;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 10px;
+    margin: 5px;
+    width: 10px;
+}
+
 .selected {
-    background-color: blue;
+    background-color: rgb(228, 44, 48);
 }
