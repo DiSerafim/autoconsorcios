@@ -4,7 +4,7 @@
     max-width: 150px;
     height: auto;
     border-radius: 14px;
-    box-shadow: 0 10px 30px hsl(185, 75%, 35%);
+    box-shadow: 0 1px 3px hsl(185, 80%, 50%);
 }
 
 .card-container header {
