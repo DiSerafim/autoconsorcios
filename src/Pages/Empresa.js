@@ -1,6 +1,6 @@
 import React, { useEffect, useState, createContext } from 'react';
 import PropTypes from 'prop-types';
-import { getImages } from '../img/imagesApi';
+import { getImages } from '../components/SliderEmpresa/imagesApi';
 import Arrows from '../components/SliderEmpresa/Controls/Arrows.js';
 import Dots from '../components/SliderEmpresa/Controls/Dots.js';
 import Slide from '../components/SliderEmpresa/Slide';

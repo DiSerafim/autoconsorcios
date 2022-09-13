@@ -44,6 +44,7 @@
     font-size: 1.5rem;
     margin: 2rem;
     text-align: left;
+    white-space: pre-wrap;
 }
 
 .fechar {
