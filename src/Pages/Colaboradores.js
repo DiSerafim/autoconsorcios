@@ -22,8 +22,8 @@ function Colaboradores() {
                     <ColaboradorCard
                         name="Diego Serafim"
                         age="35"
-                        city="Belém"
-                        followers="80K"
+                        charge="Webdesigner"
+                        followers="Whatsapp"
                         likes="803k"
                         photos="1.4k"
                     />

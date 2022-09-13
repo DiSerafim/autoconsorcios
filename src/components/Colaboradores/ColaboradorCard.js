@@ -12,7 +12,7 @@ function ColaboradorCard(props) {
                 {props.name}
                 <span className='normal-text'>{props.age}</span>
             </h1>
-            <h2 className='normal-text'>{props.city}</h2>
+            <h2 className='normal-text'>{props.charge}</h2>
             <div className='social-container'>
                 <div className="followers">
                     <h1 className='bold-text'>{props.followers}</h1>
