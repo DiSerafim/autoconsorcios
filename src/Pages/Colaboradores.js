@@ -1,5 +1,7 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../context/auth';
+import ColaboradorCard from '../components/Colaboradores/ColaboradorCard.js';
+import './ColaboradorCard.css';
 
 function Colaboradores() {
     const { authenticated, logout } = useContext(AuthContext);
@@ -12,15 +14,21 @@ function Colaboradores() {
         <div className='container'>
             <section id='header' className='text-center'>
                 <h3 className='title' title='Colaboradores'>&gt; Colaboradores</h3>
+                    <button onClick={handleLogout}>Sair</button>
             </section>
-            
+
             <section className='colaboradores'>
                 <div className='login'>
-                    <h1>Página de acesso somente <br /> através do login</h1>
-                    <h6>... Em construção!</h6>
-                    <button onClick={handleLogout}>Sair</button>
-                    <h5>Usuário autorizado? {String(authenticated)}</h5>
+                    <ColaboradorCard
+                        name="Diego Serafim"
+                        age="35"
+                        city="Belém"
+                        followers="80K"
+                        likes="803k"
+                        photos="1.4k"
+                    />
                 </div>
+                <h6>Usuário autorizado? {String(authenticated)}</h6><br></br>
             </section>
         </div>
     );

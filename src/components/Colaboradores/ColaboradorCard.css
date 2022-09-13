@@ -1,0 +1,71 @@
+.card-container {
+    background-color: white;
+    min-width: 150px;
+    max-width: 150px;
+    height: auto;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px hsl(185, 75%, 35%);
+}
+
+.card-container header {
+    background-image: linear-gradient(to right, rgb(4, 128, 139), rgb(46, 214, 219));
+    background-position: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100px;
+    text-align: center;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+}
+
+.card-container header img {
+    margin: auto;
+    width: 100px;
+    border: solid white 4px;
+    border-radius: 50%;
+    margin-top: 5px;
+}
+
+.bold-text {
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 10px 20px 0 20px;
+}
+
+.normal-text {
+    font-weight: normal;
+    font-size: 0.95rem;
+    color: hsl(0, 0, 50%);
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+/* status */
+.social-container {
+    display: flex;
+    border-top: solid rgb(206, 206, 206) 1px;
+    text-align: center;
+}
+
+.followers {
+    flex: 1;
+}
+
+.smaller-text {
+    font-weight: normal;
+    font-size: 0.7rem;
+    color: hsl(0, 0, 50%);
+    text-align: center;
+    letter-spacing: 1px;
+    padding-bottom: 20px;
+    line-height: 5px;
+}
+
+.likes {
+    flex: 1;
+}
+
+.photos {
+    flex: 1;
+}
