@@ -52,7 +52,7 @@ export const fakeApi = [
         "name":"VISÃO...",
         "description":"     - TORNA-SE O GRUPO CONHECIDO NACIONALMENTE NOS PRÓXIMOS CINCO ANOS!",
         "image":{
-            "url":"https://mmg.whatsapp.net/v/t61.43035-24/166369848_3167908660129562_6859264811756326723_n.jpg?ccb=1-7&_nc_sid=822144&_nc_ohc=l9R1Xw2PHwUAX9hFmup&_nc_ad=z-m&_nc_cid=0&_nc_ht=mmg.whatsapp.net&oh=01_AVx9h86OjsXZ_WOGKrnadsOo9NCCiiFjaUKXm_HFDjzomw&oe=63212346"
+            "url":"https://pps.whatsapp.net/v/t61.24694-24/290976947_539899507872698_2718224181775544119_n.jpg?ccb=11-4&oh=01_AVxzfVkIcU7OfotUQ9pUrnhcX9TLIY1WYp8aSkOHqN-BQg&oe=63386BE1"
         }
     },
     {
