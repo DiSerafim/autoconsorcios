@@ -15,8 +15,8 @@ function ColaboradorCard(props) {
             <h2 className='normal-text'>{props.charge}</h2>
             <div className='social-container'>
                 <div className="followers">
-                    <h1 className='bold-text'>{props.followers}</h1>
-                    <h2 className='smaller-text'>Followers</h2>
+                    <h1 className='bold-text'>{props.whatsapp}</h1>
+                    <h2 className='smaller-text'>Whatsapp</h2>
                 </div>
                 <div className="likes">
                     <h1 className='bold-text'>{props.likes}</h1>

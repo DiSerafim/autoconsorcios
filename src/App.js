@@ -8,6 +8,7 @@ import Observacao from './Pages/Observacao';
 import Empresa from './Pages/Empresa';
 import { AuthProvider, AuthContext } from './context/auth';
 import Colaboradores from './Pages/Colaboradores';
+import WhatsappPage from './Pages/WhatsappPage';
 
 function App() {
   const Private = ({ children }) => {
@@ -33,6 +34,7 @@ function App() {
             <Route exact path='/' element={<Home />} />
             <Route exact path='/empresa' element={<Empresa />} />
             <Route exact path='/observacao' element={<Observacao />} />
+            <Route exact path='/whatsappage' element={<WhatsappPage />} />
           </Routes>
           <AuthProvider>
             <Routes>
