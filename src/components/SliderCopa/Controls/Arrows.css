@@ -1,0 +1,32 @@
+.arrows {
+    display: flex;
+    font-size: 30px;
+    justify-content: space-between;
+    height: 100%;
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    z-index: 1;
+}
+
+.arrows .arrow-left {
+    background-color: aliceblue;
+    border: 1px solid aliceblue;
+    border-radius: 50%;
+    color: tomato;
+    cursor: pointer;
+    height: 30px;
+    margin-left: 1rem;
+    width: 30px;
+}
+
+.arrows .arrow-right {
+    background-color: aliceblue;
+    border: 1px solid aliceblue;
+    border-radius: 50%;
+    color: tomato;
+    cursor: pointer;
+    height: 30px;
+    margin-right: 1rem;
+    width: 30px;
+}
