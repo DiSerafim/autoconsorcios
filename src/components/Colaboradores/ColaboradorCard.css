@@ -58,7 +58,7 @@
     color: hsl(0, 0, 50%);
     text-align: center;
     letter-spacing: 1px;
-    padding-bottom: 20px;
+    padding: 5px 0 20px 0;
     line-height: 5px;
 }
 

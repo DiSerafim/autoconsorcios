@@ -6,3 +6,28 @@
     height: 100%;
     margin-top: 0;
 }
+
+.card-container {
+    margin: 0 2rem;
+}
+
+.colaboradores .album h6 {
+    background-color: red;
+    margin-top: 1rem;
+    width: 150px;
+    text-align: center;
+    padding: 2rem;
+    margin: 0 2rem;
+    color: white;
+    font-size: 1rem;
+}
+
+.colaboradores > .album > svg {
+    margin-top: 1rem;
+    /* width: 100px; */
+    text-align: center;
+    margin: -35px 0 0 30px;
+    color: white;
+    font-size: 2rem;
+    position: absolute;
+}
