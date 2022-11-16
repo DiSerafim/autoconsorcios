@@ -6,14 +6,36 @@ import Foto4 from "../../img/Setembro_Amarelo.png";
 import Foto5 from "../../img/9-Dicas.png";
 import Microsip from "../../img/microsip.png";
 import Leads from "../../img/marketing-digital.jpg";
+import JogoFaseUm from "../../img/jogos-brasil-1.png";
+import NiverNovembro from "../../img/aniversario-rafael.jpg";
 
 export const modalData = [
+  {
+    img: NiverNovembro,
+    title: "Aniversariante do mês",
+    text:
+      "01/11/2022 - Feliz aniversário!\n" +
+      "É com um enorme prazer que lhe damos parabéns. Desejamos grandes bênçãos na sua vida e que Deus venha iluminar você cada dia mais e mais. Que todos os seus sonhos se realizem e que você continue sendo essa pessoa maravilhosa.",
+    cName: "card",
+    id: 10,
+  },
+  {
+    img: JogoFaseUm,
+    title: "Horário dos jogos do Brasil até a final da Copa do Mundo 2022",
+    text:
+      "16/11/2022 - Fase de grupos:\n" +
+      "16h - Quinta-feira (24/11) - Brasil x Sérvia\n" +
+      "13h - Segunda-feira (28/11) - Brasil x Suíça\n" +
+      "16h - Sexta-feira (02/12) - Brasil x Camarões",
+    cName: "card",
+    id: 9,
+  },
   {
     img: Leads,
     title:
       "A T.I agora passa a auxiliar o comercial na geração e gestão dos Leads",
     text:
-      "Com o acompanhamento interno da geração e gestão dos leads, a autoconsorcio ganha agilidade e\n" +
+      "14/11/2022 - Com o acompanhamento interno da geração e gestão dos leads, a autoconsorcio ganha agilidade e\n" +
       "performance em abordar diferentes estratégias para coleta, diminuindo quaisquer tipo de\n" +
       "perda na coleta de leads. Com a mudança coletamos feedback diários dos supervisores\n" +
       "e aumentamos a efetividade na coleta de Leads!",
@@ -24,7 +46,7 @@ export const modalData = [
     img: Microsip,
     title: "Mudança do sistema de ligações",
     text:
-      "No mês de outubro/novembro ocorreu a mudança do sistema de ligações do pós venda e comercial. Com a mudança vieram diversos benefícios que serão implantados ao longo do dia, entre eles:\n" +
+      "14/11/2022 - No mês de outubro/novembro ocorreu a mudança do sistema de ligações do pós venda e comercial. Com a mudança vieram diversos benefícios que serão implantados ao longo do dia, entre eles:\n" +
       "* Melhora na qualidade de ligações\n" +
       "*Agilidade na apuração de resultados/indicadores\n" +
       "*Melhoria no número que aparece para o lead , agorá se adaptando a cada região(estado).\n" +
