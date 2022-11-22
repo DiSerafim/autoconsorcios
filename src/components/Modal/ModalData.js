@@ -10,8 +10,16 @@ import JogoFaseUm from "../../img/jogos-brasil-1.png";
 import NiverNovembro from "../../img/aniversario-rafael.jpg";
 import NiverNovembroClaudia from "../../img/aniver-claudia-chacha.jpeg";
 import JogoInicio from "../../img/jogo-inicio.jpeg";
+import JogoCopa from "../../img/1.PNG";
 
 export const modalData = [
+  {
+    img: JogoCopa,
+    title: <a href="/AlbumCopaCopy">"JOGOS DO BRASIL NA COPA"</a>,
+    text: "Click no link acima",
+    cName: "card",
+    id: 10,
+  },
   {
     img: JogoInicio,
     title: "JOGOS DO BRASIL NA COPA",
