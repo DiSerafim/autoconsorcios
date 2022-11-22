@@ -8,14 +8,23 @@ import Microsip from "../../img/microsip.png";
 import Leads from "../../img/marketing-digital.jpg";
 import JogoFaseUm from "../../img/jogos-brasil-1.png";
 import NiverNovembro from "../../img/aniversario-rafael.jpg";
+import NiverNovembroClaudia from "../../img/aniver-claudia-chacha.jpeg";
+import JogoInicio from "../../img/jogo-inicio.jpeg";
 
 export const modalData = [
   {
-    img: NiverNovembro,
-    title: "Aniversariante do mês",
+    img: JogoInicio,
+    title: "JOGOS DO BRASIL NA COPA",
     text:
-      "01/11/2022 - Feliz aniversário!\n" +
-      "É com um enorme prazer que lhe damos parabéns. Desejamos grandes bênçãos na sua vida e que Deus venha iluminar você cada dia mais e mais. Que todos os seus sonhos se realizem e que você continue sendo essa pessoa maravilhosa.",
+      "LIBERAÇÃO DOS FUNCIONÁRIOS\n" +
+      ">> JOGO 10H\n" +
+      "- Entrada após o término da partida.\n" +
+      ">> JOGO 12H\n" +
+      "- Saída ás 11H - retorno após o término.\n" +
+      ">> JOGO 13H\n" +
+      "- Saída as 12h - retorno após o término.\n" +
+      ">> JOGO 16H\n" +
+      "- Saída ÁS 15H - Sem retorno após o término.\n",
     cName: "card",
     id: 10,
   },
@@ -27,6 +36,24 @@ export const modalData = [
       "16h - Quinta-feira (24/11) - Brasil x Sérvia\n" +
       "13h - Segunda-feira (28/11) - Brasil x Suíça\n" +
       "16h - Sexta-feira (02/12) - Brasil x Camarões",
+    cName: "card",
+    id: 11,
+  },
+  {
+    img: NiverNovembroClaudia,
+    title: "Aniversariante do mês",
+    text:
+      "20/11 - Feliz aniversário!\n" +
+      "É com um enorme prazer que lhe damos parabéns. Desejamos grandes bênçãos na sua vida e que Deus venha iluminar você cada dia mais e mais. Que todos os seus sonhos se realizem e que você continue sendo essa pessoa maravilhosa.",
+    cName: "card",
+    id: 10,
+  },
+  {
+    img: NiverNovembro,
+    title: "Aniversariante do mês",
+    text:
+      "01/11 - Feliz aniversário!\n" +
+      "É com um enorme prazer que lhe damos parabéns. Desejamos grandes bênçãos na sua vida e que Deus venha iluminar você cada dia mais e mais. Que todos os seus sonhos se realizem e que você continue sendo essa pessoa maravilhosa.",
     cName: "card",
     id: 9,
   },
