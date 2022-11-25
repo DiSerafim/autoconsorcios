@@ -13,18 +13,17 @@ body {
   font-family: "Libre Baskerville", serif;
 }
 
-
 #book-container {
-  margin: 0 0 0 -38rem;
+  margin: 0 0 0 9rem;
   position: relative;
   display: flex;
-  padding: 5rem 0 0 0;
+  padding: 6rem 0 0 0;
 }
 
 .title img {
   pointer-events: none;
-  margin-top: 3rem;
-  max-height: 466px;
+  margin-top: 4rem;
+  max-height: 445px;
 }
 
 .page {
@@ -94,5 +93,70 @@ h3,  h4 {
 
 .copy {
   width: 600px;
-text-align: center;
+  text-align: center;
+}
+
+// celular
+@media (max-width: 500px) {
+  @import url("https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap");
+
+  *, html {
+    box-sizing: border-box;
+  }
+
+  body {
+    overscroll-behavior-y: contain;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    font-family: "Libre Baskerville", serif;
+  }
+
+  #book-container {
+    margin-left: -32rem;
+    position: relative;
+    display: flex;
+    padding: 5rem -0 -0 -0;
+    max-height: 400px;
+    max-width: 640px;
+  }
+
+  .title img {
+    pointer-events: none;
+    margin: 5rem 5rem 5rem -10rem;
+    max-height: 300px;
+    background-color: yellow;
+  }
+
+  .page {
+    .title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: -0.5rem;
+    }
+
+    cursor: pointer;
+    width: 71%;
+    height: 91%;
+    position: absolute;
+    box-shadow: inset -2px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+  
+    &:first-child {
+      left: 0;
+    }
+  
+    .img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        max-width: 90%;
+        margin: 20px auto;
+      }
+    }
+  }
 }

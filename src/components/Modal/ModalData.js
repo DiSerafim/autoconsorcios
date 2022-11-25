@@ -15,10 +15,10 @@ import JogoCopa from "../../img/1.PNG";
 export const modalData = [
   {
     img: JogoCopa,
-    title: <a href="/AlbumCopaCopy">"JOGOS DO BRASIL NA COPA"</a>,
+    title: <a href="/AlbumCopaCopy">"Álbum Auto-copa"</a>,
     text: "Click no link acima",
     cName: "card",
-    id: 10,
+    id: 13,
   },
   {
     img: JogoInicio,
@@ -34,7 +34,7 @@ export const modalData = [
       ">> JOGO 16H\n" +
       "- Saída ÁS 15H - Sem retorno após o término.\n",
     cName: "card",
-    id: 10,
+    id: 12,
   },
   {
     img: JogoFaseUm,
