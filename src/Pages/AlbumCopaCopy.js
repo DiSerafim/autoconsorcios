@@ -10,7 +10,6 @@ import { disablePageScroll, enablePageScroll } from "scroll-lock";
 import "./book.scss";
 
 const pages = [
-  "brown",
   "white",
   "white",
   "white",
@@ -39,7 +38,9 @@ const pages = [
   "white",
   "white",
   "white",
-  "brown",
+  "white",
+  "white",
+  "white",
 ];
 
 const html = {

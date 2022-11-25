@@ -14,16 +14,16 @@ body {
 }
 
 #book-container {
-  margin: 0 0 0 35rem;
+  margin: 0 0 0 9rem;
   position: relative;
   display: flex;
-  padding: 5rem 0 0 0;
+  padding: 6rem 0 0 0;
 }
 
 .title img {
   pointer-events: none;
   margin-top: 4rem;
-  max-height: 345px;
+  max-height: 445px;
 }
 
 .page {
@@ -97,7 +97,7 @@ h3,  h4 {
 }
 
 // celular
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   @import url("https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap");
 
   *, html {
@@ -114,16 +114,19 @@ h3,  h4 {
   }
 
   #book-container {
-    margin: 0 0 0 35rem;
+    margin-left: -32rem;
     position: relative;
     display: flex;
-    padding: 5rem 0 0 0;
+    padding: 5rem -0 -0 -0;
+    max-height: 400px;
+    max-width: 640px;
   }
 
   .title img {
     pointer-events: none;
-    margin-top: 4rem;
-    max-height: 345px;
+    margin: 5rem 5rem 5rem -10rem;
+    max-height: 300px;
+    background-color: yellow;
   }
 
   .page {
@@ -132,41 +135,20 @@ h3,  h4 {
       justify-content: center;
       align-items: center;
       flex-direction: column;
-    }
-    .number {
-      font-size: 11px;
-    }
-    h1 {
-      font-size: 20px;
-      color: rgba(255, 255, 255, 0.9);
-      margin: 60px auto 0 auto;
-      line-height: 2.5;
-      text-align: center;
-      text-transform: uppercase;
+      margin: -0.5rem;
     }
 
-    .right {
-      text-align: right;
-    }
-
-  h3,  h4 {
-      margin: 0;
-      padding: 0;
-    }
     cursor: pointer;
-    width: 50%;
-    height: 100%;
+    width: 71%;
+    height: 91%;
     position: absolute;
     box-shadow: inset -2px 0px 5px 0px rgba(0, 0, 0, 0.2);
     background-color: #fff;
-    padding: 0px 30px;
-    font-size: 12px;
-    transform-origin: 0% 0%;
-
+  
     &:first-child {
       left: 0;
     }
-
+  
     .img {
       display: flex;
       justify-content: center;
@@ -177,23 +159,4 @@ h3,  h4 {
       }
     }
   }
-
-  .shadow {
-    position: absolute;
-    background-image: linear-gradient(
-      to right,
-      rgba(0, 0, 0, 0.3) 0%,
-      rgba(184, 184, 184, 0) 100%
-    );
-    width: 60px;
-    height: 100%;
-    z-index: 2;
-    transform-origin: 0 0;
-  }
-
-  .copy {
-    width: 600px;
-    text-align: center;
-  }
-
 }

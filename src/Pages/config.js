@@ -1,2 +1,2 @@
-export const bookWidth = 600;
-export const bookHeight = 500;
+export const bookWidth = 900;
+export const bookHeight = 550;
